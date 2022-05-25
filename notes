@@ -40,3 +40,25 @@ given by the interpreter, more so than an "alphabet apparent" thing
 when one imports/requires codes, it actually "invoke" it (interpret and evaluate it actually); thus, if it has expression with side-effects or "executions",
     they will execute or have side-effects (!)
 
+----
+    // (!?): this is interesting; why ? because the logic-complexity of the encapsulation
+        // is made use of in the basis of ~ "identifier-based unpacking"; basically, because
+        // a URL is "structured information", I can select parts / sub-structures of that structure (!);
+        // I don't need to have an algorithmic understanding of the process anymore, just about how
+        // to generically make use of structure and unpacking->sub-structures (!)
+
+----
+npm install is, by default, "locally" installing dependencies (in the project)
+npm install --global is the one that installs packages "on the system"
+
+// ----
+"manifest file" -> package.json
+    this notion of "manifest" is a curious thing; for a package, it's not just dependencies, but it's also the "meta-data" of the package as a project
+    that other people can read about (!); I think that this additional meta-data makes it a manifest and not just a "configuration file"
+
+// ----
+npm -> package name needs to be unique
+github -> the username needs to be unique, as it represents a namespace; then locally, your repositories need to have distinct names, but overall, they are
+    guaranteed to be github-unique because of the username being github-unique and the repositories are nested in a github-unique thus they are github-unique (ugh..)
+
+// ----
