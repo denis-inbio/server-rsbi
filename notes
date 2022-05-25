@@ -1,0 +1,42 @@
+// GLOBALS -> there is the global variable that keeps being referenced;
+    seems "dangerous" to make use of it; otherwise, it's probably more of a "thread-global data" thing ?
+
+__dirname -> path to current directory
++ __filename -> current file's name
+=> __dirname + __filename
+
+require, import (?)
+    does require fail and cause a crash / throw an error ?
+    => try { require("bla, non-existent"); }.catch() {}
+module => object with meta-data about the current module -> isn't a module always in a file's scope ?
+
+process => the execution environment of the node.js interpreter; this can be RAM, temp, OS, versions of node or system, maybe timing, maybe filesystem, maybe ??
+
+----
+setInterval()
+setTimeout()
+
+----
+built-in modules or 3rd party modules
+=> "no dot": node_modules
+=> "with dot, relative path" => in the project
+
+----
+module.exports is an object; using that
+    import { unpack } from "./bla";
+is just a way to unpack an object (!), but the other likelihood is to just
+    import Id_whatever from "./file"; => this nests the identifiers vertically, inside the namespace created by an identifier (!); it's like an escape sequence,
+given by the interpreter, more so than an "alphabet apparent" thing
+
+(*): "every file is a module"; then modules are just the JSON variant of files, making them uniformly code-accessible (!)
+    (!!): but notice that it still doesn't mean that code writing can be done at run-time, or is something encouraged by this javascript mechanism
+
+----
+(!): reading files and building .exports objects are the result of an interpretation starting at one point: the index.js
+    so, the "tree" begins with index.js as its root
+    (*?): but, can it really not evaluate things concurrently: parallel (?!)
+
+----
+when one imports/requires codes, it actually "invoke" it (interpret and evaluate it actually); thus, if it has expression with side-effects or "executions",
+    they will execute or have side-effects (!)
+
